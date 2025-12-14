@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Books - Ebaad">
+  <main class="container">
+    <a href="/" class="back-link">← Back</a>
+    
+    <section class="content">
+      
+      
+    
+
+      <div class="book">
+        <h2>Beyond Good and Evil</h2>
+        <span class="author">Friedrich Nietzsche</span>
+        <p>Morality is shaped by the need of the era. This was the first book that allowed me to see that morality is flexible.</p>
+      </div>
+
+      <div class="book">
+        <h2>Siddhartha</h2>
+        <span class="author">Hermann Hesse</span>
+        <p>This book allowed me the courage to pursue my own morality and was the first step towards internalizing a value system that was my own.</p>
+      </div>
+
+      <div class="book">
+        <h2>The Brothers Karamazov</h2>
+        <span class="author">Fyodor Dostoevsky</span>
+        <p>Dostoevsky is one of my favorite writers. This book taught me so much about the existential crisis one has in their youth pertaining to god and morality. I wish I had gotten a hold of this book way earlier than I had. One of the moments that came to me was the conversation that Ivan has with Alyosha in the tavern. What a great book and what a great writer.</p>
+      </div>
+
+      <div class="book">
+        <h2>The Death of Ivan Ilyich</h2>
+        <span class="author">Leo Tolstoy</span>
+        <p>Tolstoy's Ivan Ilyich died so that we can live. I owe this book so much credit for making me realize what a painful death is. I try everyday to live life to the fullest so I can remain content on my deathbed.</p>
+        <blockquote>"Ivan Ilych's life had been most simple and most ordinary and therefore most terrible."</blockquote>
+      </div>
+
+      <div class="book">
+        <h2>The Bridge on the Drina</h2>
+        <span class="author">Ivo Andrić</span>
+        <p>This book talks about the bridge over Drina in Bosnia and the lives of people around it for nearly 400 years. I had the honor of reading this book while in Bosnia, which for centuries been passed to many hands and many kingdoms. This book told me how small fault lines can take the shape of large chasms, and how a thousand differences between humans pale into insignificance when ones humanity demands it.</p>
+        <blockquote>"I am not afraid of the humans, but of what is inhuman in them."</blockquote>
+      </div>
+
+      <h2 class="section-title">Notable Mentions</h2>
+      <ul class="mentions">
+        <li>East of Eden — John Steinbeck</li>
+        <li>The Count of Monte Cristo — Alexandre Dumas</li>
+        <li>Letters to a Young Poet — Rainer Maria Rilke</li>
+        <li>Crime and Punishment — Fyodor Dostoevsky</li>
+        <li>Man's Search for Meaning — Viktor Frankl</li>
+        <li>The Body Keeps the Score — Bessel van der Kolk</li>
+        <li>Finding Me — Viola Davis</li>
+        <li>Mindstorms — Seymour Papert</li>
+        <li>Lectures on Computation — Richard Feynman</li>
+        <li>The Story of Civilization — Will Durant</li>
+        <li>Up from Slavery — Booker T. Washington</li>
+        <li>Narrative of the Life of Frederick Douglass — Frederick Douglass</li>
+        <li>The Reluctant Fundamentalist — Mohsin Hamid</li>
+        <li>The Autobiography of Benjamin Franklin — Benjamin Franklin</li>
+        <li>The Design of Everyday Things — Don Norman</li>
+        <li>The Fountainhead — Ayn Rand (I had a phase)</li>
+        <li>12 Rules for Life — Jordan Peterson</li>
+        <li>Basic Economics — Thomas Sowell</li>
+        <li>The Prophet — Khalil Gibran</li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 600px;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--text-primary);
+  }
+
+  .content h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .intro {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .book {
+    margin-top: 2.5rem;
+  }
+
+  .book h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .author {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .book p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  blockquote {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--text-secondary);
+    color: var(--text-secondary);
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .mentions {
+    list-style: none;
+    color: var(--text-secondary);
+  }
+
+  .mentions li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 1.5rem;
+    }
+  }
+</style>

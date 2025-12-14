@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const links = [
+  { label: 'GitHub', url: 'https://github.com' },
+  { label: 'Twitter / X', url: 'https://twitter.com' },
+  { label: 'LinkedIn', url: 'https://linkedin.com' },
+  { label: 'Email', url: 'mailto:your@email.com' },
+];
+---
+
+<Layout title="Links - Your Name">
+  <main class="container">
+    <a href="/" class="back-link">← Back</a>
+    
+    <section class="content">
+      <h1>Links</h1>
+      
+      <ul class="link-list">
+        {links.map((link) => (
+          <li class="link-item">
+            <a href={link.url} target="_blank" rel="noopener noreferrer" class="external-link">
+              {link.label}
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 600px;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--text-primary);
+  }
+
+  .content h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .link-list {
+    list-style: none;
+  }
+
+  .link-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-secondary);
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+  }
+
+  .external-link:hover {
+    color: var(--text-hover);
+  }
+
+  .arrow {
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: all 0.2s ease;
+  }
+
+  .external-link:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 1.5rem;
+    }
+  }
+</style>

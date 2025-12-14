@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Music - Ebaad">
+  <main class="container">
+    <a href="/" class="back-link">← Back</a>
+    
+    <section class="content">
+
+      <p class="intro">I have the widest range of what I listen to, from classical music to Turkish house.</p>
+
+      <div class="track">
+        <h2><a href="https://en.wikipedia.org/wiki/Symphony_No._9_(Dvo%C5%99%C3%A1k)" target="_blank" rel="noopener">Symphony No. 9</a></h2>
+        <span class="artist">Antonín Dvořák — The New World Symphony</span>
+        <p>Every time I am starting something new. Moving to a new city, starting a new project. This fits perfectly.</p>
+      </div>
+
+      <div class="track">
+        <h2><a href="https://www.youtube.com/watch?v=dImqZ9TNvQc" target="_blank" rel="noopener">Mahi Mera</a></h2>
+        <span class="artist">Ali Sethi & Jamaldin</span>
+        <p>This is a song in Saraiki, the language spoken where I grew up. It is also filmed near a place where I grew up.</p>
+      </div>
+
+      <div class="track">
+        <h2><a href="https://www.youtube.com/watch?v=xj_T9T9j_aE" target="_blank" rel="noopener">Wonderful Life</a></h2>
+        <span class="artist">Smith & Burrows</span>
+        <p>“No need to run and hide. It's a wonderful wonderful life. No need to laugh and cry. It's a wonderful wonderful life”</p>
+      </div>
+
+      <div class="track">
+        <h2>Piano Concerto No. 2</h2>
+        <span class="artist">Sergei Rachmaninoff</span>
+      </div>
+
+      <div class="track">
+        <h2>Violin Concerto</h2>
+        <span class="artist">Jean Sibelius</span>
+      </div>
+
+      <h2 class="section-title">Classical</h2>
+      <ul class="mentions">
+        <li><a href="https://www.youtube.com/watch?v=mmCnQDUSO4I" target="_blank" rel="noopener">Waltz No. 2</a> — Dmitri Shostakovich</li>
+        <li>Symphony No. 5 — Gustav Mahler</li>
+        <li><a href="https://www.youtube.com/watch?v=z_buSmZ0BJ4" target="_blank" rel="noopener">Melody</a> — Myroslav Skoryk</li>
+        <li>Violin Concerto, Op. 35 — Pyotr Tchaikovsky</li>
+        <li>The Four Seasons — Antonio Vivaldi (I am a basic bitch I know)</li>
+        <li>O Fortuna — Carl Orff</li>
+      </ul>
+
+      <h2 class="section-title">Rap</h2>
+      <ul class="mentions">
+        <li>No Role Modelz — J. Cole</li>
+        <li>Downers At Dusk — Talha Anjum</li>
+        <li>Apna Time Aayega — Divine</li>
+        <li>THE LAST RIDE — Sidhu Moose Wala</li>
+      </ul>
+
+      <h2 class="section-title">Musical</h2>
+      <ul class="mentions">
+        <li>Hamilton — Lin-Manuel Miranda (Wait for It, Satisfied, Non-Stop)</li>
+      </ul>
+
+      <h2 class="section-title">The Edge of Adolescence + Coming to America Phase</h2>
+      <ul class="mentions">
+        <li>The 1975</li>
+        <li>Hippo Campus</li>
+        <li>Playboi Carti</li>
+        <li>Lil Uzi Vert</li>
+      </ul>
+
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 600px;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: var(--text-primary);
+  }
+
+  .intro {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .track {
+    margin-top: 2rem;
+  }
+
+  .track h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .track h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .track h2 a:hover {
+    opacity: 0.7;
+  }
+
+  .artist {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .track p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .mentions {
+    list-style: none;
+    color: var(--text-secondary);
+  }
+
+  .mentions li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+  }
+
+  .mentions a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+  }
+
+  .mentions a:hover {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+const navLinks = [
+  { href: '/about', label: 'About' },
+  { href: '/books', label: 'Books' },
+  { href: '/music', label: 'Music' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="nav">
+  {navLinks.map((link) => (
+    <a 
+      href={link.href} 
+      class:list={['nav-link', { active: currentPath === link.href }]}
+    >
+      {link.label}
+    </a>
+  ))}
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease;
+    width: fit-content;
+  }
+
+  .nav-link:hover {
+    color: var(--text-hover);
+  }
+
+  .nav-link.active {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 480px) {
+    .nav-link {
+      font-size: 0.95rem;
+    }
+  }
+</style>
